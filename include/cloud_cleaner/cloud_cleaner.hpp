@@ -2,7 +2,7 @@
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "cloud_cleaner/voxel_grid_filter.hpp"
 #include "cloud_cleaner/statistical_outlier_removal_filter.hpp"
-#include "cloud_cleaner/pass_through_filter.hpp"
+#include "cloud_cleaner/field_limit_filter.hpp"
 #include "cloud_cleaner/radius_outlier_removal_filter.hpp"
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_cloud.h>
