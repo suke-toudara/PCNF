@@ -4,9 +4,9 @@
 
 class PassThroughFilter {
 public:
-    pcl::PointCloud<pcl::PointXYZ>::Ptr apply(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud) {
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
-        pcl::PassThrough<pcl::PointXYZ> pass_filter;
+    pcl::PointCloud<pcl::PointXYZI>::Ptr  applypcl::PointCloud<pcl::PointXYZI>::Ptr cloud) {
+        pcl::PointCloud<pcl::PointXYZI>::Ptr  filtered_cloud(new pcl::PointCloud<pcl::PointXYZI>());
+        pcl::PointCloud<pcl::PointXYZI> pass_filter;
         //LiDAR area limmit
      　 // x axis
         pass_filter.setInputCloud(filtered_cloud); // zでフィルタされた結果を使用
