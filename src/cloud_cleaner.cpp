@@ -13,9 +13,9 @@ PointCloudFilterNode::PointCloudFilterNode(const rclcpp::NodeOptions & options)
 }
 
 void PointCloudFilterNode::pointCloudCallback(const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>());
+    pcl::PointCloud<pcl::PointXYZI>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZI>()); 
     pcl::fromROSMsg(*msg, *cloud);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud = cloud; 
+    pcl::PointCloud<pcl::PointXYZI>::Ptr filtered_cloud = cloud;  // 同じ型に変更
 
     for (const auto& filter_type : filter_types_) {
         if (filter_type == "voxel_grid") {
