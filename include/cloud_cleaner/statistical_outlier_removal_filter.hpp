@@ -4,8 +4,8 @@
 
 class StatisticalOutlierRemovalFilter {
 public:
-    pcl::PointCloud<pcl::PointXYZ>::Ptr apply(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud) {
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
+    pcl::PointCloud<pcl::PointXYZI>::Ptr apply(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud) {
+        pcl::PointCloud<pcl::PointXYZI>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZI>());
         pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor_filter;
 
         sor_filter.setInputCloud(cloud);
