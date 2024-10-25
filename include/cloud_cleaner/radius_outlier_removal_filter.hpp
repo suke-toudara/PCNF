@@ -4,9 +4,9 @@
 
 class RadiusOutlierRemovalFilter {
 public:
-    pcl::PointCloud<pcl::PointXYZ>::Ptr apply(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud) {
-        pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
-        pcl::RadiusOutlierRemoval<pcl::PointXYZ> radius_filter;
+    pcl::PointCloud<pcl::PointXYZI>::Ptr apply(pcl::pcl::PointCloud<pcl::PointXYZI>::Ptr cloud) {
+        pcl::PointCloud<pcl::PointXYZI>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZI>());
+        pcl::RadiusOutlierRemoval<pcl::PointXYZI> radius_filter;
 
         radius_filter.setInputCloud(cloud);
         radius_filter.setRadiusSearch(0.8);  // 検索半径 (単位: メートル)
