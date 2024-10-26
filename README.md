@@ -1,5 +1,5 @@
-# cloud_cleaner
-cloud_cleanerは、点群のノイズ除去を行うためのフィルタリングアルゴリズムを実装した
+# PCNF - Point Cloud Noise Filter
+PCNは、点群のノイズ除去を行うためのフィルタリングアルゴリズムを実装した
 ROS2パッケージです。
 
 ### Filter

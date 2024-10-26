@@ -13,7 +13,7 @@ ament_auto_add_library(cloud_cleaner SHARED
 )
 
 rclcpp_components_register_nodes(cloud_cleaner
-  "cloud_cleaner::MapManager"
+  "cloud_cleaner::PointCloudFilterNode"
 )
 
 ament_auto_add_executable(cloud_cleaner_node

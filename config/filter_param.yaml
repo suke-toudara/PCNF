@@ -1,0 +1,27 @@
+/**:
+  ros__parameters:
+    #filter_types: ["voxel_grid", "statistical_outlier_removal", "pass_through", "radius_outlier_removal"]
+    #filter_types: ["pass_through","voxel_grid"]
+    filter_types: ["voxel_grid"]
+    cloud_topic_name          : /lidar_points
+    filter_cloud_topic_name   : /filtered_cloud
+    
+    # voxel filter
+    voxel_size : 0.1
+    min_points : 3
+
+    # statistical_outlier_removal_filter
+    search_pc_num : 50
+    std_thresh : 1.0
+
+    #
+    x_min : -10.0 
+    x_max : 10.0
+    y_min : -5.0
+    y_max : 5.0
+    z_min : 0.0
+    z_max : 3.5
+    
+    # radius_outlier_removal
+    float search_radius : 0.8
+    int min_pc_num : 2

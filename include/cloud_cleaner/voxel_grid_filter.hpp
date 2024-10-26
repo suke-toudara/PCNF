@@ -15,14 +15,7 @@ class VoxelGridFilter {
 public:
     float voxel_size = 0.1f; 
     int min_points = 4; 
-
     pcl::PointCloud<pcl::PointXYZI>::Ptr apply(pcl::PointCloud<pcl::PointXYZI>::Ptr cloud) {
-        pcl::PointCloud<pcl::PointXYZI>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZI>());
-        pcl::VoxelGrid<pcl::PointXYZI> voxel_filter;
-        // voxel_filter.setInputCloud(cloud);
-        // voxel_filter.setLeafSize(voxel_size, voxel_size, voxel_size); 
-        // voxel_filter.setSaveLeafLayout(true);
-        // voxel_filter.filter(*filtered_cloud); 
         return filterByOccupancy(cloud);
     }
 
