@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <node_container pkg="rclcpp_components" exec="component_container" name="cloud_cleaner_container" namespace="cloud_cleaner" >
+    <composable_node pkg="cloud_cleaner" plugin="cloud_cleaner::GridMapGenerator" name="cloud_cleaner_node" namespace="cloud_cleaner">
+      <param from="$(find-pkg-share cloud_cleaner)/config/grid_map_config.yaml" />
+    </composable_node>
+  </node_container>
+</launch>

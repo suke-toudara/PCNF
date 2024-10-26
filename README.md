@@ -3,7 +3,6 @@ PCNは、点群のノイズ除去を行うためのフィルタリングアル�
 ROS2パッケージです。
 
 ### Filter
-[Uploading Screencast from 09-21-2024 09:47:35 PM.webm…]()
 
 ### Dependencies
 This class depends on the following libraries
